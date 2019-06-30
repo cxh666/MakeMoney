@@ -1,6 +1,11 @@
-[TOC]
+- [flask+gunicorn+supervisor+nginx](#flaks+gunicorn+supervisor+nginx)
+  * [flask](#flask)
+  * [gunicorn](#gunicorn)
+  * [supervisor](#supervisor)
+  * [Nginx](#nginx)
 
-# flaks+gunicorn+supervisor+nginx
+
+# flask+gunicorn+supervisor+nginx
 
 - flask：python的服务器框架
 - gunicorn：webservice，WSGI的容器
