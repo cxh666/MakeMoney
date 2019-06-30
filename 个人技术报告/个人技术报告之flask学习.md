@@ -1,13 +1,13 @@
 - [教程汇总](#教程汇总)
 - [python3教程学习笔记](#python3教程学习笔记)
-  * [1. 配置](#1. 配置)
-  * [2. hello world](#2. hello world)
-  * [3. 模板](#3. 模板)
-  * [4. 表单](#4. 表单)
-  * [5. 数据库](#5. 数据库)
-  * [6. shell上下文](#6. shell上下文)
-  * [7. flask 热加载](#7. flask 热加载)
-  * [8. 用户登录](#8. 用户登录)
+  * [配置](#配置)
+  * [hello world](#hello world)
+  * [模板](#模板)
+  * [表单](#表单)
+  * [数据库](#数据库)
+  * [shell上下文](#shell上下文)
+  * [flask 热加载](#flask 热加载)
+  * [用户登录](#用户登录)
 - [其他参考链接](#其他参考链接)
 
 ## 教程汇总
@@ -24,7 +24,7 @@
 
 home/xh_files/app_flask
 
-### 1. 配置
+### 配置
 
 环境：python3.7.3 , flask 1.0.3 , flask-wtf
 
@@ -37,7 +37,7 @@ home/xh_files/app_flask
    在使用flask的时候（以及其他所以依赖的时候），经常遇到不同的程序需要不同版本的三方包，所以可以使用虚拟环境来解决这个问题，python3.5以上可以直接使用`python3 -m venv venv`来创建，然后使用` source venv/bin/activate`来激活并进入venv（如果是低于3.4版本，则安装称为[virtualenv](https://virtualenv.pypa.io/)的第三方工具，然后`virtualenv venv`
 
 
-### 2. hello world
+### hello world
 
 ```python
 #app/__init__.py
@@ -70,7 +70,7 @@ FLASK_APP=start.py
 
 运行：`flask run`
 
-### 3. 模板
+### 模板
 
 1. {{...}}是动态的，只有运行时才知道内容。
 
@@ -114,7 +114,7 @@ FLASK_APP=start.py
    ```
 
 
-### 4. 表单
+### 表单
 
 使用Flask-WTF插件来处理应用中的Web表单
 
@@ -234,7 +234,7 @@ FLASK_APP=start.py
 	
 	至此就服务器就开始完毕，等待客户访问，并从routes.py引导客户进入网页，而forms.py则存储表单类，以备routes.py 处理表单。
 
-### 5. 数据库
+### 数据库
 
 flask数据库拓展：Flask-SQLAlchemy，属于ORM（object Relational Mapper），ORM允许使用高级实体而不是表和SQL来管理数据库，ORM的工作就是将高级操作转换成数据库命令。
 
@@ -260,7 +260,7 @@ flask数据库迁移框架：flask-migrate
 
    > 通过数据库迁移机制的支持，在你修改应用中的模型之后，将生成一个新的迁移脚本（`flask db migrate`），你可能会审查它以确保自动生成的正确性，然后将更改应用到你的开发数据库（`flask db upgrade`）。 测试无误后，将迁移脚本添加到源代码管理并提交。
 
-### 6. shell上下文
+### shell上下文
 
 可以在start.py中实现一个函数：
 
@@ -277,7 +277,7 @@ def make_shell_context():
 
 接着，每次在进入python的shell中进行测试等，就不用每次都输入from...import..了，直接命令行执行flask shell即可。
 
-### 7. flask 热加载
+### flask 热加载
 
 先配置好config.py文件（详见笔记4），在Config函数中加上`TEMPLATES_AUTO_RELOAD = True`，然后在start.py中加上
 
@@ -286,7 +286,7 @@ app.jinja_env.auto_reload = True
 app.run(debug=True, host='0.0.0.0')
 ```
 
-### 8. 用户登录
+### 用户登录
 
 1. 存储密码使用密码哈希
 
