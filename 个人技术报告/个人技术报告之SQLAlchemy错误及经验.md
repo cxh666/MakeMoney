@@ -1,4 +1,12 @@
-[TOC]
+- [SQL的错误与经验](#SQL的错误与经验)
+  * [数据库表的建立](#数据库表的建立)
+    + [sqlalchemy中default值的坑](#sqlalchemy中default值的坑)
+    + [sqlalchemy中声明类型的坑](#sqlalchemy中声明类型的坑)
+    + [sqlalchemy中PickleType的坑](#sqlalchemy中PickleType的坑)
+    + [sqlalchemy中关联的坑](#sqlalchemy中关联的坑)
+  * [多对多查询](#多对多查询)
+  * [Like查询](#Like查询)
+  * [参考链接](#参考链接)
 
 # SQL的错误与经验
 
