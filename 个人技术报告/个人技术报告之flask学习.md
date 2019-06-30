@@ -1,12 +1,12 @@
 - [教程汇总](#教程汇总)
 - [python3教程学习笔记](#python3教程学习笔记)
   * [配置](#配置)
-  * [hello world](#hello world)
+  * [helloworld](#helloworld)
   * [模板](#模板)
   * [表单](#表单)
   * [数据库](#数据库)
   * [shell上下文](#shell上下文)
-  * [flask 热加载](#flask 热加载)
+  * [flask热加载](#flask热加载)
   * [用户登录](#用户登录)
 - [其他参考链接](#其他参考链接)
 
@@ -37,7 +37,7 @@ home/xh_files/app_flask
    在使用flask的时候（以及其他所以依赖的时候），经常遇到不同的程序需要不同版本的三方包，所以可以使用虚拟环境来解决这个问题，python3.5以上可以直接使用`python3 -m venv venv`来创建，然后使用` source venv/bin/activate`来激活并进入venv（如果是低于3.4版本，则安装称为[virtualenv](https://virtualenv.pypa.io/)的第三方工具，然后`virtualenv venv`
 
 
-### hello world
+### helloworld
 
 ```python
 #app/__init__.py
@@ -277,7 +277,7 @@ def make_shell_context():
 
 接着，每次在进入python的shell中进行测试等，就不用每次都输入from...import..了，直接命令行执行flask shell即可。
 
-### flask 热加载
+### flask热加载
 
 先配置好config.py文件（详见笔记4），在Config函数中加上`TEMPLATES_AUTO_RELOAD = True`，然后在start.py中加上
 
